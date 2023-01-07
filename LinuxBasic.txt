@@ -22,42 +22,58 @@ VMware Workstation的使用：
 			特权指令：OS运行特权指令；
 			普通指令：
 		程序员：
+		各厂商生产的CPU不同，更新迭代后的版本不同，使得程序员写程序需要兼顾硬件，很不方便
+		为了平衡这种不同，有了通用软件，操作系统也是其中之一。
+		类比去欧洲旅游，各国语言不通，本人不可能在短时间内学习各国语言，这时只需要有一个会
+		各国语言的翻译在身边即可。
+		有了通用软件后，程序员可以直接面向通用软件写程序，而不用考虑硬件设备了
+
+		当然，并不是没有操作系统就不能写程序了，程序员如果愿意面向硬件写程序当然也是可行的，
+		只不过那样考虑的就太多了，对程序员本人要求过高，写出来的程序也并不通用。
 
 	OS: Operating System
 		软件程序
 		通用目的
 			硬件驱动
-			进程管理
+			进程管理（CPU时间片的切割和分配）
 			内存管理
 			网络管理
 			安全管理
+		操作系统就是个虚拟机，程序员面向操作系统模拟出的计算机写程序，而非面向计算机写程序
 
 		System Call
 			Syscall：系统调用
 
 		编程层次：
 			硬件规格：hardware specifiacation
-			系统调用：
+			系统调用：System call
 			库调用：library call
+		编程层次就类似吃面食的过程，我需要吃馒头，硬件规格就像麦种，面向硬件编程是非常困难
+		的事情，我需要全部流程亲手操作还得不到保障，而系统调用即操作系统会方便一些，像麦子，
+		已经避免了在麦种到麦子的自然原因导致的失败，可是依旧麻烦，不过相对于硬件规格好了不
+		止一星半点。库调用和前面系统调用类似，为了更方便的编程制造，像面粉，已经可以很方便
+		的生产馒头了。相对应的，编程层次越高，对产品来说越接近，越方便，可是灵活性少了很多
 
-	UI:
+	UI:User Interface
 		GUI: Graphic User Interface
 		CLI: Command Line Interface
 
 	ABI: Application Binary Interface
+	因为ABI不同，导致可执行文件在不同操作系统不能兼容
 	API：Application Programming Interface
+	但是若程序没有编译，使用API编程，则可以兼容不同操作系统
 
 	CPU架构类型：
 		x86
 		x64
-		arm
+		arm：智本主义，只设计不生产
 
-		m68000, m68k
-		power
-		powerpc
-		ultrasparc
-		alpha
-		安腾
+		m68000, m68k   摩托罗拉
+		power世界上第一个多核CPU  IBM
+		powerpc 
+		ultrasparc  SUN
+		alpha  HP
+		安腾  
 
 	Windows
 	Linux：
@@ -66,11 +82,11 @@ VMware Workstation的使用：
 		GNU/Linux
 
 	Unix：
-		System （Bell Lab）
+		System （Bell Lab）  正统（嫡出）
 			AIX （IBM）
 			Solaris (SUN)
 			HP-UX (HP)
-		BSD: （BSRG）Berkeley System Distribution
+		BSD: （BSRG）Berkeley System Distribution  （庶出）
 			NetBSD
 			OpenBSD
 			FreeBSD
