@@ -177,8 +177,20 @@ VMware Workstation的使用：
 		B: 20000, 20
 
 	问题1：CentOS和Linux是什么关系？CentOS和RHEL是什么关系？
-	问题2：各种开源协议的具体细节？
-		GPL, LGPL, Apache, BSD
+	问题2：各种开源协议的具体细节？、
+		树状结构：
+			他人修改代码后是否可以闭源：
+			--------------------Yes：每一个修改过的文件，是否都必须放置版权说明
+								--------------------Yes：Apache许可证
+								--------------------No：衍生软件的广告，是否可以用你的名字促销？
+													--------------------Yes：MIT许可证
+													--------------------No：BSD许可证
+			--------------------No：新增代码是否采用同样许可证？
+								--------------------Yes：GPL许可证
+								--------------------No：是否需要对源码的修改处提供说明文档？
+													--------------------Yes：Mozilla许可证
+													--------------------No：LGPL许可证
+		图解：https://blog.csdn.net/Robin_star_/article/details/83218279
 
 	程序包管理器：
 		rpm:
@@ -575,7 +587,7 @@ Linux的文件系统：
 	根文件系统(rootfs)：
 		root filesystem
 
-	LSB, FHS: (FileSystem Heirache Standard)
+	LSB, FHS: (FileSystem Hierarchy Standard)
 		/etc, /usr, /var, /root, /home, /dev
 
 		/boot：引导文件存放目录，内核文件(vmlinuz)、引导加载器(bootloader, grub)都存放于此目录；
